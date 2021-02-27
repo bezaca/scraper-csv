@@ -6,3 +6,7 @@ You need to run the following command to get all necessaries packages for this p
 ```
 pip install -r requirements.txt
 ```
+`Run` the program executing:
+```
+python main.py
+```
