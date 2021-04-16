@@ -3,8 +3,6 @@ from selenium import webdriver
 import chromedriver_binary
 
 
-# Functions
-
 def get_url(search_term):
     """
     Generate a url from search term
@@ -14,7 +12,6 @@ def get_url(search_term):
     # add term query to url
     url = f'https://www.amazon.com/s?k={clean_search_term}&language=en_US&ref=nb_sb_noss_2'
 
-    # add page to query
     url += '&page{}'
 
     return url
@@ -33,14 +30,13 @@ def extract_record(item):
 
     try:
         """ Not all the items have the price on it """
-        # Price
         price_parent = item.find('span', 'a-price')
         price = price_parent.find('span', 'a-offscreen').text
     except AttributeError:
         return
 
     try:
-        # Rank and rating
+        
         rating = item.i.text
         review_count = item.find(
             'span', {'class': 'a-size-base', 'dir': 'auto'}).text
