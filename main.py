@@ -6,14 +6,10 @@ from module.functions import get_url, extract_record
 
 
 def main(search_term):
-    """
-    Run main program
-    """
+    
     # Start the webdriver
-    """Important to configure your web driver"""
     driver = webdriver.Chrome()
 
-    # Getting a list for the records
     records = []
 
     url = get_url(search_term)
