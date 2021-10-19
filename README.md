@@ -1,5 +1,5 @@
 # CSV SCRAP
- Project for scraping information and save to csv files  
+Scraping information and save to csv files  
 
 ## `Important`
 You need to run the following command to get all necessaries packages for this project:
